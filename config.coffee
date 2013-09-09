@@ -1,4 +1,6 @@
 exports.config =
+    paths:
+        public: '/home/darko/Development/bujinkan/bujinkan_api/public'
     files:
         javascripts:
             joinTo:

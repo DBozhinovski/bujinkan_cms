@@ -1,0 +1,48 @@
+<h3>
+	{{head}}
+</h3>
+<form class="form-horizontal">
+
+	<div class="control-group">
+		<label for="language">Јазик</label>
+		<select name="language" id="language">
+			<option>-</option>
+			<option value="mk">Македонски</option>
+			<option value="en">Англиски</option>
+		</select>
+	</div>
+
+	<div class="control-group">
+		<label for="page">Страна</label>
+		<select name="page" id="page">
+			<option>-</option>
+			<option value="bujinkan">Буџинкан</option>
+			<option value="daito">Даито</option>
+			<option value="hombu">Хомбу</option>
+		</select>
+	</div>
+	<div class="control-group">
+		<label for="title">Наслов</label>
+		<input class="input-block-level" type="text" name="title" id="title" value="{{#event}}{{title}}{{/event}}" />
+	</div>
+	<div class="control-group">
+		<label for="link">Линк</label>
+		<input class="input-block-level" type="text" name="link" id="link" value="{{#event}}{{link}}{{/event}}" />
+	</div>
+
+	<div class="control-group">
+		<label for="thumbnail">Слика</label>
+		<span class="btn btn-file">Одбери слика...<input type="file" name="thumbnail" id="thumbnail" /></span>
+		<span class="name"></span>
+		<div class="preview">
+			{{#if event.thumbnail}}
+				<img src="{{event.thumbnail}}" />
+			{{/if}}
+		</div>
+	</div>
+</form>
+
+<div class="pull-right">
+	<a class="btn btn-large btn-default" href="#events/list"><i class="icon-arrow-left"></i> Назад</a>
+	<button class="btn btn-large btn-success" id="save"><i class="icon-save"></i> Зачувај и објави</button>
+</div>

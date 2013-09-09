@@ -1,0 +1,55 @@
+<h3>
+	{{head}}
+</h3>
+<hr/><br/><br/>
+
+<form class="form-horizontal">
+<div class="row">
+
+	<div class="span6">
+		<div class="control-group">
+			<label for="language">Јазик</label>
+			<select name="language" id="language">
+				<option>-</option>
+				<option value="mk">Македонски</option>
+				<option value="en">Англиски</option>
+			</select>
+		</div>
+		<div class="control-group">
+			<label for="title">Наслов</label>
+			<input class="input-block-level" type="text" name="title" id="title" value="{{#article}}{{title}}{{/article}}" />
+		</div>
+	</div>
+
+	<div class="span6">
+		<div class="control-group">
+			<label for="page">Страна</label>
+			<select name="page" id="page">
+				<option>-</option>
+				<option value="bujinkan">Буџинкан</option>
+				<option value="daito">Даито</option>
+				<option value="hombu">Хомбу</option>
+			</select>
+		</div>
+		<div class="control-group">
+			<label for="category">Категорија</label>
+			<select name="category" id="category">
+				<option>-</option>
+				{{#categories}}
+					<option value="{{value}}">{{name}}</option>
+				{{/categories}}
+			</select>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<label>Содржина</label>
+		<div class="summernote container"></div>
+	</div>
+</div>
+</form>
+<div class="pull-right">
+	<a class="btn btn-large btn-default" href="#articles/list"><i class="icon-arrow-left"></i> Назад</a>
+	<button class="btn btn-large btn-success" id="save"><i class="icon-save"></i> Зачувај и објави</button>
+</div>

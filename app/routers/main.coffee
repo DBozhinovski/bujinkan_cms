@@ -1,10 +1,8 @@
 class MainRouter extends Backbone.Router
-    routes:
-        '': 'index'
-
-    index: ->
-        IndexView = require 'views/index'
-        index = new IndexView()
+    initialize: ->
+        require "routers/article"
+        require "routers/event"
+        
 
 main = new MainRouter()
 module.exports = main

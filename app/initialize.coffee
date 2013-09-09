@@ -6,4 +6,9 @@ require 'routers/main'
 
 $ ->
     # Initialize Backbone History
-    Backbone.history.start pushState: yes
+    location.hash = ""
+    Backbone.history.start pushState: no
+
+    $(".main-nav li").on "click", ->
+        $(".main-nav li").removeClass "active"
+        $(@).addClass "active"
